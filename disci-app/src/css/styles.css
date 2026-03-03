@@ -10,120 +10,157 @@
     box-sizing: border-box;
 }
 
+/*body */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f6;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f4f6, #ececf1);
     display: flex;
     justify-content: center;
-    padding: 40px 20px;
+    padding: 60px 20px;
     color: #2b2b2b;
 }
+
 
 /* Contenedor principal */
 .app-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 720px;
 }
 
 /* Header */
 .app-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .app-header h1 {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 34px;
     color: #5a0f2e;
+    letter-spacing: 1px;
 }
 
 .subtitle {
     font-size: 14px;
-    color: #666;
-    margin-top: 5px;
+    color: #777;
+    margin-top: 6px;
 }
 
 /* Cards */
 .card {
     background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.card:hover {
+    transform: translateY(-3px);
 }
 
 /* XP Card */
+.xp-card {
+    background: linear-gradient(135deg, #5a0f2e, #7b1e3a);
+    color: white;
+}
 .xp-info {
     display: flex;
     justify-content: space-between;
+    align-items: white;
 }
 
 .label {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #888;
+    opacity: 0.8;
 }
 
 #totalXP {
-    font-size: 28px;
-    color: #5a0f2e;
+    font-size: 32px;
+    font-weight: bold;
+    
 }
 
 #userRank {
-    font-size: 18px;
-    color: #5a0f2e;
+    font-size: 20px;
+
 }
 
 /* Formulario */
 .form-card h2,
 .missions-card h2 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 500;
+    color: #5a0f2e;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     display: flex;
     flex-direction: column;
 }
 
 .form-group label {
     font-size: 13px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: #555;
 }
 
 input,
 select {
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
     border: 1px solid #ddd;
     font-size: 14px;
+    transition: 0.2s ease;
 }
 
 input:focus,
 select:focus {
     outline: none;
     border-color: #5a0f2e;
+    box-shadow: 0 0 0 3px rgba(90, 15, 46, 0.1);
 }
 
 /* Botón */
 .primary-btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
-    border-radius: 8px;
-    background-color: #5a0f2e;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #5a0f2e, #7b1e3a);
     color: white;
     font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .primary-btn:hover {
-    background-color: #7b1e3a;
+    transform: translateY(-2px);
+    opacity: 0.9;
 }
+
+/* Botones de completar */
+.mission-list button {
+    margin-top: 8px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #5a0f2e;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.mission-list button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+
 
 /* Lista de misiones */
 .mission-list {
@@ -131,15 +168,19 @@ select:focus {
 }
 
 .mission-list li {
-    padding: 12px;
-    border-radius: 8px;
+    padding: 18px;
+    border-radius: 12px;
     background-color: #fafafa;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     border: 1px solid #eee;
+    transition: 0.2s ease;
+}
+.mission-list li:hover{
+    border-color: #5a0f2e;
 }
 
 /* Misión completada */
 .success {
     background-color: #f3e6eb;
-    border-color: #5a0f2e;
+    border: 1px solid #5a0f2e;
 }
