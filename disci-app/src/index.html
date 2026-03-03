@@ -1,0 +1,79 @@
+   <!-- Universidad del Valle de Guatemala  -->
+   <!-- Laboratorio 4  -->
+       <!-- index  -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Disci-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="app-container">
+
+        <!-- HEADER -->
+        <section class="app-header">
+            <h1>Disci-App</h1>
+            <p class="subtitle">Sistema de disciplina</p>
+        </section>
+
+        <!-- XP CARD -->
+        <section class="card xp-card">
+            <div class="xp-info">
+                <div>
+                    <p class="label">XP Global</p>
+                    <h2 id="totalXP">0</h2>
+                </div>
+
+                <div>
+                    <p class="label">Rango</p>
+                    <h3 id="userRank">Novato</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM CARD -->
+        <section class="card form-card">
+            <h2>Nueva misión</h2>
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="name" placeholder="Ej: Estudiar 1 hora">
+            </div>
+
+            <div class="form-group">
+                <label>Descripción</label>
+                <input type="text" id="description" placeholder="Ej: Repasar sistemas web">
+            </div>
+
+            <div class="form-group">
+                <label>Dificultad</label>
+                <select id="difficulty">
+                    <option value="facil">Fácil — 10 XP</option>
+                    <option value="normal">Normal — 25 XP</option>
+                    <option value="dificil">Difícil — 50 XP</option>
+                </select>
+            </div>
+
+            <button class="primary-btn" onclick="createMission()">
+                Crear misión
+            </button>
+        </section>
+
+        <!-- MISSIONS CARD -->
+        <section class="card missions-card">
+            <h2>Misiones</h2>
+            <ul id="missionList" class="mission-list"></ul>
+        </section>
+
+    </main>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
