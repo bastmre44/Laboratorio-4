@@ -1,0 +1,19 @@
+OS files
+
+.DS_Store Thumbs.db
+
+Logs
+
+*.log
+
+Node (if used later)
+
+node_modules/
+
+Editor folders
+
+.vscode/ .idea/
+
+Environment files
+
+.env
