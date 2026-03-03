@@ -1,0 +1,145 @@
+/* Universidad del Valle de Guatemala 
+    Laboratorio 4 
+    CSS*/
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    color: #2b2b2b;
+}
+
+/* Contenedor principal */
+.app-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Header */
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-header h1 {
+    font-weight: 600;
+    font-size: 28px;
+    color: #5a0f2e;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* XP Card */
+.xp-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+#totalXP {
+    font-size: 28px;
+    color: #5a0f2e;
+}
+
+#userRank {
+    font-size: 18px;
+    color: #5a0f2e;
+}
+
+/* Formulario */
+.form-card h2,
+.missions-card h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input,
+select {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #5a0f2e;
+}
+
+/* Botón */
+.primary-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #5a0f2e;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #7b1e3a;
+}
+
+/* Lista de misiones */
+.mission-list {
+    list-style: none;
+}
+
+.mission-list li {
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+/* Misión completada */
+.success {
+    background-color: #f3e6eb;
+    border-color: #5a0f2e;
+}
