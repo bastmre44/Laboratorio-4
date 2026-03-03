@@ -13,6 +13,39 @@
 let missions = [];
 let totalXP = 0;
 
+// ===============================
+// CARGAR DATOS DESDE LOCAL STORAGE
+// ===============================
+
+window.onload = function () {
+
+    const storedXP = localStorage.getItem("totalXP");
+    const storedMissions = localStorage.getItem("missions");
+
+    if (storedXP) {
+        totalXP = parseInt(storedXP);
+    }
+
+    if (storedMissions) {
+        missions = JSON.parse(storedMissions);
+    }
+
+    updateXP();
+    renderMissions();
+};
+
+
+// ===============================
+// GUARDAR EN LOCAL STORAGE
+// ===============================
+
+function saveToLocalStorage() {
+    localStorage.setItem("totalXP", totalXP);
+    localStorage.setItem("missions", JSON.stringify(missions));
+}
+
+
+
 
 // ===============================
 // OBTENER XP SEGÚN DIFICULTAD
@@ -56,14 +89,16 @@ function createMission() {
         status: "PENDING"
     };
 
-    // Registro en consola (requisito del laboratorio)
+    // Registro en local storage
     console.log("Nueva misión creada:", mission);
 
     missions.push(mission);
 
+    saveToLocalStorage();
     renderMissions();
     clearForm();
 }
+
 
 
 // ===============================
@@ -84,7 +119,12 @@ function renderMissions() {
             <small>${mission.description}</small><br>
             Dificultad: ${mission.difficulty} | XP: ${mission.xp}<br>
             Estado: ${mission.status}<br><br>
-            <button onclick="completeMission(${index})">Completar</button>
+            <button 
+                onclick="completeMission(${index})"
+                ${mission.status === "SUCCESSFUL" ? "disabled" : ""}
+            >
+                Completar
+            </button>
         `;
 
         if (mission.status === "SUCCESSFUL") {
@@ -109,6 +149,7 @@ function completeMission(index) {
         mission.status = "SUCCESSFUL";
         totalXP += mission.xp;
 
+        saveToLocalStorage();
         updateXP();
         renderMissions();
     }
