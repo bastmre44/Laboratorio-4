@@ -70,7 +70,8 @@ page.
 
 ## Installation and Usage
 
-1.  Clone the repository: git clone `<REPOSITORY_URL>`{=https://github.com/bastmre44/Laboratorio-4.git}
+1.  Clone the repository: git clone 
+{=https://github.com/bastmre44/Laboratorio-4.git}
 
 2.  Navigate to the project folder: cd disci-app/src
 
@@ -105,6 +106,8 @@ disci-app/
 ##  Demo Video
 
 The demo video is located in the /video folder it is a canvas link  and demonstrates:
+{https://www.canva.com/design/DAHC3DzlzB4/PIe8x8LumnvhSuG-buBeaw/edit?utm_content=DAHC3DzlzB4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton}
+
 
 -   Creating a mission\
 -   Console log registration\
